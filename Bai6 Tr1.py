@@ -1,0 +1,5 @@
+a = input('Nhap so nguyen duong tu 1 - 9: ')
+x = int(a)
+y = int('%s%s' %(a, a))
+z = int('%s%s%s' %(a, a, a))
+print('{} + {} + {} = {}'.format(x, y, z, x+y+z))
