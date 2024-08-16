@@ -25,19 +25,19 @@ def sohoanhao(n):
     else:
         return False
 
-def locphat(n):
-    # m = n % 10
-    # if m == 6 or m == 8:
-    #     locphat(n // 10)
-    # else:
-    #     return False
-    # return True
+def checklocphat(n):
     while n > 0:
-        so = n % 10
-        n //= 10
-        if so != 6 and so != 8:
+        socuoi = n % 10
+        if str(socuoi) not in '68':
             return False
-        return True
+        n //= 10
+    return True
+
+def lietkelocphat(n):
+    print(f'Cac so loc phat < {n}: ')
+    for i in range(n):
+        if checklocphat(i):
+            print(i, end=' ')
 
 def tinhtongbinhphuong(p):
     tongbinhphuong = 0
@@ -47,10 +47,10 @@ def tinhtongbinhphuong(p):
         tongbinhphuong = so**2
     return tongbinhphuong
 
-def somayman(k):
-    for i in range(100):
-        tong = tinhtongbinhphuong(k)
-        if tong == 1
+# def somayman(k):
+#     for i in range(100):
+#         tong = tinhtongbinhphuong(k)
+#         if tong == 1
 
 n = nhapn()
 print('Cau a:')
@@ -64,12 +64,8 @@ if sohoanhao(n) == True:
 else:
     print(f'{n} khong phai la so hoan hao')
 print('Cau c:')
-# if locphat(n) == True:
-#     print(f'{n} la so loc phat')
-# else:
-#     print(f'{n} khong phai la so loc phat')
-print('So loc phat: ', end='')
-for i in range(1,n+1):
-    if locphat(i) == True:
-        print(i, end=' ')
-print('')
+if checklocphat(n) == True:
+    print(f'{n} la so loc phat')
+else:
+    print(f'{n} khong phai la so loc phat')
+lietkelocphat(n)
