@@ -32,9 +32,31 @@ def tao_list_chan(l):
             l_chan.append(i)
     return l_chan
 
+# d
+def checklocphat(k):
+    for so in str(k):
+        if so not in '68':
+            return False
+    return True
+
+def list_loc_phat(l):
+    l_lp = []
+    for i in l:
+        if checklocphat(i):
+            l_lp.append(i)
+    return l_lp
+
 # ham main
 n = nhapn()
 l = tao_list_random(n)
 print(l)
 l_chan = tao_list_chan(l)
-print(l_chan)
+if not l_chan:
+    print('Khong co so chan')
+else:
+    print(l_chan)
+l_lp = list_loc_phat(l)
+if not l_lp:
+    print('Khong co loc phat')
+else:
+    print(l_lp)
