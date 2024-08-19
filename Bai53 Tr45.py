@@ -41,6 +41,7 @@ Tháng 4 năm 1963'''
 
 discard = '(),"-.?:'
 print('Cau a:')
+print('Dict:')
 d = {}
 for char in s.split():
     char = char.strip(discard).lower()
@@ -52,8 +53,26 @@ for char in s.split():
         d[char] = 1
 for k, v in d.items():
     print("'{}': {}".format(k, v), end='; ')
+print('\nTuple:')
+l1 = ()
+l2 = ()
+for char in s.split():
+    char = char.strip(discard).lower()
+    if char == '':
+        pass
+    elif char not in l1:
+        count = 0
+        l1 += (char,)
+        for c in s.split():
+            c = c.strip(discard).lower()
+            if char == c:
+                count += 1
+        l2 += (count,)
+t = tuple(zip(l1, l2))
+print(t)
 
 print('\nCau b:')
+print('Dict:')
 most = 0
 for k, v in d.items():
     if most < v:
