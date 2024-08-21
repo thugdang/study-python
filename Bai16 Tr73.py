@@ -78,5 +78,5 @@ while True:
         break
     else:
         print('Input khong hop le!')
-DocNoiDungFile_CSV('D:/thuc.dangdong/My Documents/Studies/Python/danhsach.csv')
-GhiCSVDauRot('D:/thuc.dangdong/My Documents/Studies/Python/danhsach.csv', 'D:/thuc.dangdong/My Documents/Studies/Python/dau.csv', 'D:/thuc.dangdong/My Documents/Studies/Python/rot.csv')
+DocNoiDungFile_CSV('E:/Documents/Studies/Python/danhsach.csv')
+GhiCSVDauRot('E:/Documents/Studies/Python/danhsach.csv', 'E:/Documents/Studies/Python/dau.csv', 'E:/Documents/Studies/Python/rot.csv')
